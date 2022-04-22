@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -28,6 +29,7 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+        freeCompilerArgs = ['-Xjvm-default=all-compatibility']
     }
     // Databind 需要的配置
     buildFeatures {
@@ -36,6 +38,7 @@ android {
 }
 
 dependencies {
+    def lifecycle_version = "2.5.0-alpha03"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
@@ -46,4 +49,16 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     // LiveData依赖
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
+    // ViewModel依赖
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.activity:activity-ktx:1.2.2"
+
+    // 协程依赖
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9'
+
+    // Room
+    def room_version = "2.4.1"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-rxjava2:$room_version"
 }
