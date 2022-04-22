@@ -2,6 +2,7 @@ package com.justin.jetpacklearn.Room
 
 import androidx.room.Dao
 import androidx.room.Query
+import kotlinx.coroutines.flow.Flow
 
 /*
  * created by Justin on 2022/4/20
@@ -13,7 +14,7 @@ import androidx.room.Query
 interface ScheduleDao {
 
     @Query("SELECT * FROM schedule ORDER BY arrival_time ASC")
-    fun getAll(): List<Schedule>
+    fun getAll(): Flow<List<Schedule>>
 
     @Query("SELECT * FROM schedule WHERE stop_name = :stopName ORDER BY arrival_time ASC")
     fun getByStopName(stopName: String): List<Schedule>

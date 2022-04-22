@@ -3,15 +3,14 @@ package com.justin.jetpacklearn.Room
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.lifecycle.coroutineScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.justin.jetpacklearn.MyApplication
 import com.justin.jetpacklearn.Room.adapter.BusStopAdapter
 import com.justin.jetpacklearn.databinding.ActivityRoomBinding
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.collect
 
 class RoomActivity : AppCompatActivity() {
     private lateinit var dataBinding: ActivityRoomBinding
@@ -37,9 +36,14 @@ class RoomActivity : AppCompatActivity() {
         })
         recyclerView.adapter = adapter
         
-        GlobalScope.launch(Dispatchers.IO) {
-
-                adapter.submitList(viewModel.fullSchedule())
+//        GlobalScope.launch(Dispatchers.IO) {
+//
+//                adapter.submitList(viewModel.fullSchedule())
+//        }
+        lifecycle.coroutineScope.launch {
+            viewModel.fullSchedule().collect {
+                adapter.submitList(it)
+            }
         }
     }
 
