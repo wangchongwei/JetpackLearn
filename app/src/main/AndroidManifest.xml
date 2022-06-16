@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.justin.jetpacklearn">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -11,18 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackLearn">
         <activity
-            android:name=".Room.RoomActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Flow.FlowActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ViewModel.ViewModelActivity"
-            android:exported="true" />
-        <activity
-            android:name=".LiveData.LiveDataActivity"
-            android:exported="true" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -31,6 +21,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Room.RoomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Flow.FlowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewModel.ViewModelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LiveData.LiveDataActivity"
+            android:exported="false" />
+
+        <activity android:name=".hilt.HiltActivity"
+            android:exported="false"/>
+
     </application>
 
 </manifest>

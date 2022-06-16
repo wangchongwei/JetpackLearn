@@ -4,12 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import com.justin.jetpacklearn.databinding.ActivityFlowBinding
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.*
 import kotlin.system.measureTimeMillis
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.channelFlow
 
 class FlowActivity : AppCompatActivity() {
 
@@ -23,16 +20,19 @@ class FlowActivity : AppCompatActivity() {
         dataBinding = ActivityFlowBinding.inflate(layoutInflater)
         setContentView(dataBinding.root)
         viewModelFactory = Injection.providerFactory(this)
-        flow1()
-        channelFlow1()
         
         initView()
     }
 
     private fun initView() {
         dataBinding.login.setOnClickListener {
-            val result = viewModel.login("user", "123321qQ")
+            viewModel.login()
         }
+
+        viewModel.userInfo.observe(this){
+            dataBinding.loginInfo.text = it.toString()
+        }
+
     }
 
     fun flow1() = runBlocking {
