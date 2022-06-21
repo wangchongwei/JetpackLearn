@@ -12,6 +12,7 @@
 
 ## Compose
 
+## [Hilt](/app/src/main/java/com/justin/jetpacklearn/hilt)
 
 # kotlin
 
@@ -22,3 +23,17 @@
 ## CameraX
 
 ## Paging
+
+
+# 开发模式
+
+## MVC
+
+
+## MVP
+
+
+## MVVM
+
+
+## [MVI](/app/src/main/java/com/justin/jetpacklearn/mvi)

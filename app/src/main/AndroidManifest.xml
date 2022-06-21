@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackLearn">
         <activity
+            android:name=".mvp.v.MvpActivity"
+            android:exported="false" />
+        <activity
             android:name=".mvi.v.MVIActivity"
             android:exported="false" />
         <activity
