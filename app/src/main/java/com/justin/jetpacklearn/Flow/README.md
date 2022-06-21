@@ -25,6 +25,7 @@ implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1"
 
 ### runBlocking
 
+runBlocking 启动协程，并运行在当前线程
 
 ```kotlin
 class MainActivity4 : AppCompatActivity() {
@@ -198,3 +199,15 @@ fun channelFlow1() = runBlocking {
 
 channelFlow 与 collect是异步的，当send只会，collect不会阻塞后续的send，
 所以总共会阻塞600ms
+
+
+
+## Retrofit + Flow + LiveData
+
+在实际使用中，请求远端数据，
+在ViewModel请求数据获取到flow，
+在flow中对数据流进行处理，将处理结果赋值给一个LiveData
+在Activity中订阅LiveData数据，
+
+此时当数据获取到，或者数据发生变更时，会自动触发数据更新。
+

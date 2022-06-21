@@ -26,6 +26,8 @@ class HiltActivity : AppCompatActivity() {
     fun initView() {
         binding.login.setOnClickListener {
             println("login =>")
+
+            viewModel.getUserInfo("988846751453515776")
         }
 
         println(viewModel)

@@ -11,6 +11,7 @@ import com.justin.jetpacklearn.Room.RoomActivity
 import com.justin.jetpacklearn.ViewModel.ViewModelActivity
 import com.justin.jetpacklearn.databinding.ActivityMainBinding
 import com.justin.jetpacklearn.hilt.HiltActivity
+import com.justin.jetpacklearn.mvi.v.MVIActivity
 import java.security.Permission
 
 class MainActivity : AppCompatActivity() {
@@ -56,6 +57,11 @@ class MainActivity : AppCompatActivity() {
         binding.hilt.setOnClickListener {
             println("HiltActivity ===>")
             startActivity(Intent(this, HiltActivity::class.java))
+        }
+
+        binding.mvi.setOnClickListener {
+            println("MVIActivity ===>")
+            startActivity(Intent(this, MVIActivity::class.java))
         }
     }
 }

@@ -38,9 +38,16 @@ class FlowViewModel(private val repository: FlowRepository) : ViewModel() {
                     // flowOn可以指定链式调用上侧的运行线程
                 .flowOn(Dispatchers.IO)
                 .catch {
-
+                    it.printStackTrace()
                 }.map{
-                    it.data
+                    println("Network Result => ${it.toString()}")
+                    if(it.code == 200) {
+                        it.data
+                    }
+                    throw  Exception("Network Error")
+                }.catch {
+                    it.printStackTrace()
+                    println("catch error ==> ${it.toString()}")
                 }.collect{
                     // collect 运行线程取决于当前协程的执行线程
                     println("collect threadName:${Thread.currentThread().name}")

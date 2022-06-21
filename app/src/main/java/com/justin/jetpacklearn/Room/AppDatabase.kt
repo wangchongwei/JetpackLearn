@@ -10,7 +10,7 @@ import androidx.room.RoomDatabase
  * email: wcw1992yu@163.com
  * github: https://github.com/wangchongwei
  */
-@Database(entities = arrayOf(Schedule::class), version = 1)
+@Database(entities = arrayOf(Schedule::class), version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
 
