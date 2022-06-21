@@ -2,7 +2,7 @@
 
 ## DataBinding
 
-## [LiveData]('./app/src/main/java/com/justin/jetpacklearn/LiveData')
+## [LiveData](/app/src/main/java/com/justin/jetpacklearn/LiveData)
 
 ## Navigation
 
