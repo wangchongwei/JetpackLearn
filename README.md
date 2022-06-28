@@ -1,33 +1,40 @@
-# Jetpack组件库
+# 学习导航
 
-## DataBinding
+## Jetpack组件库
 
-## [LiveData](/app/src/main/java/com/justin/jetpacklearn/LiveData)
 
-## Navigation
+- DataBinding
+- Navigation
 
-## [Room](/app/src/main/java/com/justin/jetpacklearn/Room)
+- WorkManager
 
-## [ViewModel](/app/src/main/java/com/justin/jetpacklearn/ViewModel)
+- CameraX
+
+- Paging
+
+- [LiveData](/app/src/main/java/com/justin/jetpacklearn/LiveData)
+
+- [Room](/app/src/main/java/com/justin/jetpacklearn/Room)
+
+- [ViewModel](/app/src/main/java/com/justin/jetpacklearn/ViewModel)
+
+- [Hilt](/app/src/main/java/com/justin/jetpacklearn/hilt)
 
 ## Compose
 
-## [Hilt](/app/src/main/java/com/justin/jetpacklearn/hilt)
+## kotlin
 
-# kotlin
+- [Flow](/app/src/main/java/com/justin/jetpacklearn/Flow)
 
-## [Flow](/app/src/main/java/com/justin/jetpacklearn/Flow)
 
-## WorkManager
-
-## CameraX
-
-## Paging
 
 
 # 开发模式
 
-## MVC
+## MV* 开发模式
+
+- [MVP](/app/src/main/java/com/justin/jetpacklearn/mvp)
+- [MVI](/app/src/main/java/com/justin/jetpacklearn/mvi)
 
 
 ## MVP
