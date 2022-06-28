@@ -4,6 +4,7 @@
 
 
 - DataBinding
+
 - Navigation
 
 - WorkManager
@@ -36,11 +37,6 @@
 - [MVP](/app/src/main/java/com/justin/jetpacklearn/mvp)
 - [MVI](/app/src/main/java/com/justin/jetpacklearn/mvi)
 
+- MVP
 
-## MVP
-
-
-## MVVM
-
-
-## [MVI](/app/src/main/java/com/justin/jetpacklearn/mvi)
+- MVC
