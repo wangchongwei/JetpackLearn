@@ -59,7 +59,7 @@ public class MyActiivty extends Activity {
 
 handler 处理消息模型:
 
-[loop.png](looper.png)
+![loop.png](looper.png)
 
 handler 负责发送、处理消息
 looper 负责一直轮询消息
