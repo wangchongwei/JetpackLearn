@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackLearn">
         <activity
+            android:name=".message.MessageActivity"
+            android:exported="false" />
+        <activity
             android:name=".io.IOActivity"
             android:exported="false" />
         <activity

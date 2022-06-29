@@ -12,6 +12,7 @@ import com.justin.jetpacklearn.ViewModel.ViewModelActivity
 import com.justin.jetpacklearn.databinding.ActivityMainBinding
 import com.justin.jetpacklearn.hilt.HiltActivity
 import com.justin.jetpacklearn.io.IOActivity
+import com.justin.jetpacklearn.message.MessageActivity
 import com.justin.jetpacklearn.mvi.v.MVIActivity
 import com.justin.jetpacklearn.mvp.v.MvpActivity
 import java.security.Permission
@@ -73,6 +74,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.io.setOnClickListener {
             startActivity(Intent(this, IOActivity::class.java))
+        }
+
+        binding.message.setOnClickListener {
+            startActivity(Intent(this, MessageActivity::class.java))
         }
     }
 }
