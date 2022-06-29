@@ -1,7 +1,8 @@
 # android 消息机制
 
 ![思维导图](message.png)
-[思维导图.pos](message.pos)
+<!-- [思维导图.pos](message.pos) -->
+<a href="message.pos" target="_blank">思维导图.pos</a>
 
 在 andorid 中，系统的行为、用户的输入等事件都会被包装为一个消息，
 进行消息发送、处理
