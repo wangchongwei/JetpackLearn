@@ -22,6 +22,24 @@ class FlowActivity : AppCompatActivity() {
         viewModelFactory = Injection.providerFactory(this)
         
         initView()
+
+        test()
+    }
+
+    private fun test() {
+        GlobalScope.launch {
+            flow<Int> {
+                emit(1)
+            }
+                .map {
+                    it.toString()
+                }
+
+                .collect {
+
+            }
+        }
+
     }
 
     private fun initView() {

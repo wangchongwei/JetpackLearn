@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TabTextSize" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+
+<!--        <item name="android:textSize">20sp</item>-->
+        <item name="android:textColor">@color/teal_200</item>
+    </style>
+
+</resources>

@@ -10,6 +10,7 @@ import com.justin.jetpacklearn.mvi.i.LoginIntent
 import com.justin.jetpacklearn.mvi.m.LoginViewModel
 import com.justin.jetpacklearn.mvi.state.LoginState
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
@@ -20,6 +21,8 @@ class MVIActivity : AppCompatActivity() {
     lateinit var binding: ActivityMviactivityBinding
 
     private val viewModel: LoginViewModel by viewModels()
+
+    private var uiStateJob: Job? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,7 +47,7 @@ class MVIActivity : AppCompatActivity() {
 
     // 监听状态变更
     private fun observeViewModelState() {
-        lifecycleScope.launch {
+        uiStateJob = lifecycleScope.launchWhenStarted {
             viewModel.state.collect {
                 when(it) {
                     is LoginState.Idle -> {
@@ -67,5 +70,10 @@ class MVIActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    override fun onStop() {
+        uiStateJob?.cancel()
+        super.onStop()
     }
 }
