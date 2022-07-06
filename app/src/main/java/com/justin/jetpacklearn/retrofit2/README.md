@@ -61,7 +61,7 @@ OSI体系结构(7层)
   </tr>
   <tr>
     <td>7.应用层</td>
-    <td rowspan="3">4.应用层 </td>
+    <td rowspan="3">4.应用层\n(HTTP)</td>
     <td rowspan="3">5.应用层</td>
   </tr>
   <tr>
@@ -72,12 +72,12 @@ OSI体系结构(7层)
   </tr>
   <tr>
     <td>4.传输层</td>
-    <td>3.运输层</td>
+    <td>3.运输层\n(TCP、UDP)</td>
     <td>4.运输层</td>
   </tr>
   <tr>
     <td>3.网络层</td>
-    <td>2. 网际层</td>
+    <td>2. 网际层\n(IP)</td>
     <td>3.网络层</td>
   </tr>
   <tr>
