@@ -29,4 +29,4 @@ ViewPager2 是 androidx 下的依赖，无需在重复导入。
 
 
 
-## 事件分发机制
+[事件分发机制](event)
