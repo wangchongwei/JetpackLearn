@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackLearn">
         <activity
+            android:name=".socket.SocketActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.UIActivity"
             android:exported="false" />
         <activity

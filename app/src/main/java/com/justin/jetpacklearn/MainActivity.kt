@@ -15,6 +15,7 @@ import com.justin.jetpacklearn.io.IOActivity
 import com.justin.jetpacklearn.message.MessageActivity
 import com.justin.jetpacklearn.mvi.v.MVIActivity
 import com.justin.jetpacklearn.mvp.v.MvpActivity
+import com.justin.jetpacklearn.socket.SocketActivity
 import com.justin.jetpacklearn.ui.UIActivity
 import java.security.Permission
 
@@ -83,6 +84,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.ui.setOnClickListener {
             startActivity(Intent(this, UIActivity::class.java))
+        }
+
+        binding.socket.setOnClickListener {
+            startActivity(Intent(this,SocketActivity::class.java))
         }
     }
 }
