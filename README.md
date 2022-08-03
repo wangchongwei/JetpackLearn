@@ -4,6 +4,17 @@
 
 
 - DataBinding
+开启DataBinding，在需要的模块的build.gradle文件中，添加配置：
+
+```groovy
+android{
+
+    // Databind 需要的配置
+    buildFeatures {
+        viewBinding true
+    }
+}
+```
 
 - Navigation
 

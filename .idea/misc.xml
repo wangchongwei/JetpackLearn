@@ -19,6 +19,7 @@
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3296875" />
         <entry key="app/src/main/res/layout/fragment_mine.xml" value="0.3296875" />
         <entry key="app/src/main/res/layout/item_recyclerview_home_fragment.xml" value="0.3296875" />
+        <entry key="app/src/main/res/layout/loading_stub.xml" value="0.3296875" />
       </map>
     </option>
   </component>

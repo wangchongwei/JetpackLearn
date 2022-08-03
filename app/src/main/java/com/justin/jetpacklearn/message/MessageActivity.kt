@@ -63,6 +63,7 @@ class MessageActivity : AppCompatActivity() {
             true
         }
 
+        handler.removeCallbacksAndMessages(null)
 
     }
 

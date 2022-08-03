@@ -22,10 +22,10 @@ class UIActivity : AppCompatActivity() {
     }
 
     private fun initView() {
-        var fragments = listOf(HomeFragment(), MineFragment())
+        var fragments = listOf(HomeFragment(), MineFragment(), HomeFragment())
         var adapter = ViewPagerAdapter(this, fragments)
         binding.viewPager.adapter = adapter
-        var tabList = arrayOf("Home", "Mine")
+        var tabList = arrayOf("Home", "Mine","Setting")
 
         TabLayoutMediator(binding.tabLayout, binding.viewPager){
             tab, position -> tab.text = tabList[position]

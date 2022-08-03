@@ -1057,8 +1057,20 @@ IdleHandler 相当于闲时任务，只有在空闲时才会执行。
 
 #### 常见面试提问：
 
-- 如何在页面绘制完成后执行一个任务
-  此时就可以使用 IdleHandler，因为调用到 IdleHandler 中的 queueIdle 函数时，保证消息队列中的 Message 都被消费了。
+* 如何在页面绘制完成后执行一个任务
+  - 此时就可以使用 IdleHandler，因为调用到 IdleHandler 中的 queueIdle 函数时，保证消息队列中的 Message 都被消费了。
+* Looper.loop()一直在循环，为什么不会导致应用卡死(ANR)?
+  - loop()循环与 ANR 是两个不相关的事情，loop 只是循环事件，ANR 是处理事件耗时，导致无法响应用户的下一次输入。
+    系统的 ANR 弹窗都是通过消息机制发送，并弹出提示窗的。
+* postDelay 的 Message 怎么处理
+  - 其实是设置了handler的callback回调，然后会调用sendMessageDelay
+
+* Handler内存泄露
+  - 创建Handler时，直接使用Handler，并重写handlerMessage函数，这种方式，相当于创建了一个匿名内部类
+  - 匿名内部类、非静态内部类，持有外部类的引用。当Activity销毁时，因为handler持有了Activity的引用，导致Activity无法被回收。此时就存在内存泄露
+  - 解决方案：
+    - 1、创建使用静态内部类继承Handler
+    - 2、在Activity被销毁是，如在onDestroy生命周期中调用 handler.removeCallbacksAndMessages(null); handler = null;
 
 ## 总结
 
@@ -1081,7 +1093,7 @@ handler 消息机制大概流程：
 - fragment 生命周期
 
 - Handler 内存泄漏
-  原理：
+  原理：创建Handler匿名内部类导致存在内存泄露，内部类持有外部类的引用，导致Activity无法被回收。
 
 - postDelay 的 Message 怎么处理
 
