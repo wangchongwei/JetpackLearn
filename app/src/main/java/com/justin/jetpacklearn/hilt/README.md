@@ -2,7 +2,7 @@
 
 先讲使用，再讲原理
 
-google文档地址：https://developer.android.google.cn/training/dependency-injection/hilt-android?hl=zh_cn
+[google文档地址：](https://developer.android.google.cn/training/dependency-injection/hilt-android?hl=zh_cn)
 
 ## 使用示例： Hilt + ViewModel + Repository
 
