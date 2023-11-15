@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackLearn">
         <activity
+            android:name="mvx.mvvm.v.MVVMActivity"
+            android:exported="false" />
+        <activity
             android:name=".socket.SocketActivity"
             android:exported="false" />
         <activity
@@ -28,10 +31,10 @@
             android:name=".io.IOActivity"
             android:exported="false" />
         <activity
-            android:name=".mvp.v.MvpActivity"
+            android:name="mvx.mvp.v.MvpActivity"
             android:exported="false" />
         <activity
-            android:name=".mvi.v.MVIActivity"
+            android:name="mvx.mvi.v.MVIActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

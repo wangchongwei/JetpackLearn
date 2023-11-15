@@ -13,10 +13,11 @@ import com.justin.jetpacklearn.databinding.ActivityMainBinding
 import com.justin.jetpacklearn.hilt.HiltActivity
 import com.justin.jetpacklearn.io.IOActivity
 import com.justin.jetpacklearn.message.MessageActivity
-import com.justin.jetpacklearn.mvi.v.MVIActivity
-import com.justin.jetpacklearn.mvp.v.MvpActivity
+import mvx.mvi.v.MVIActivity
+import mvx.mvp.v.MvpActivity
 import com.justin.jetpacklearn.socket.SocketActivity
 import com.justin.jetpacklearn.ui.UIActivity
+import mvx.mvvm.v.MVVMActivity
 import java.security.Permission
 
 class MainActivity : AppCompatActivity() {
@@ -67,6 +68,10 @@ class MainActivity : AppCompatActivity() {
         binding.mvi.setOnClickListener {
             println("MVIActivity ===>")
             startActivity(Intent(this, MVIActivity::class.java))
+        }
+
+        binding.mvvm.setOnClickListener {
+            startActivity(Intent(this, MVVMActivity::class.java))
         }
 
         binding.mvp.setOnClickListener {
