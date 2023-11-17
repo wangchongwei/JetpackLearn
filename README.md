@@ -46,9 +46,9 @@ android{
 ## MV* 开发模式
 
 - MVC
-- [MVP](/app/src/main/java/com/justin/jetpacklearn/mvp)
-- MVVM
-- [MVI](/app/src/main/java/com/justin/jetpacklearn/mvi)
+- [MVP](/app/src/main/java/com/justin/jetpacklearn/mvx/mvp)
+- [MVVM](/app/src/main/java/com/justin/jetpacklearn/mvx/mvvm)
+- [MVI](/app/src/main/java/com/justin/jetpacklearn/mvx/mvi)
 
 
 
